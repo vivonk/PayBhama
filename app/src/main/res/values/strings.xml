@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_setting">Settings</string>
+
+    <!--Hindi Department-->
+    <string name="dashboard_hindi">मुख्यपेज</string>
+    <string name="setting_hindi">सेटिंग</string>
+    <string name="notification_hindi">अधिसूचना</string>
 </resources>

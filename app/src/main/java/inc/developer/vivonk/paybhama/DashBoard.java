@@ -26,6 +26,9 @@ public class DashBoard extends AppCompatActivity {
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
+                case R.id.navigation_setting:
+                    mTextMessage.setText(R.string.setting_hindi);
+                    return true;
             }
             return false;
         }
