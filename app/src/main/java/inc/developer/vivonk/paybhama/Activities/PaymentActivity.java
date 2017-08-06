@@ -35,15 +35,16 @@ public class PaymentActivity extends Activity implements ZXingScannerView.Result
         Log.e(TAG, "onCreate: Payment Actiity created" );
         barcodeScannerView=(ZXingScannerView) findViewById(R.id.barcode_reader);
         barCodeResult=(EditText)findViewById(R.id.barcode_result);
-      /*  barcodeScannerView.startCamera();
-        barcodeScannerView.setResultHandler(this);*/
+      //  barcodeScannerView.startCamera();
+        barcodeScannerView.setResultHandler(this);
+
     }
     @Override
     protected void onResume() {
         super.onResume();
 
 
-            barcodeScannerView.setResultHandler(this);
+//        barcodeScannerView.setResultHandler(this);
         barcodeScannerView.startCamera();
     }
 
