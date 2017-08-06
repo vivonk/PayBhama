@@ -14,7 +14,7 @@ import inc.developer.vivonk.paybhama.R;
  * Created by vivonk on 06-08-2017.
  */
 
-public class HomeFragment extends android.support.v4.app.Fragment {
+public class HomeFragment extends Fragment {
     public HomeFragment() {
         super();
     }
@@ -22,7 +22,6 @@ public class HomeFragment extends android.support.v4.app.Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
     }
 

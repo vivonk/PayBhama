@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:weightSum="10">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9.5">
+<com.dlazaro66.qrcodereaderview.QRCodeReaderView
+    android:id="@+id/qr_code_reader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/ic_send_black_48dp"
+            android:textAllCaps="false"/>
+    </FrameLayout>
+<EditText
+    android:id="@+id/qr_result"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/family_number_hindi"
+    android:paddingLeft="15dp"
+    android:layout_marginLeft="5dp"
+    android:layout_weight=".5"/>
+</LinearLayout>
