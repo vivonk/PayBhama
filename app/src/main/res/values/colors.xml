@@ -3,5 +3,9 @@
     <color name="colorPrimary">#4CB5F5</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#258093</color>
+    <color name="border_color">#4CB5F5</color>
+    <color name="background_color">#FFF</color>
+
+
 
 </resources>
