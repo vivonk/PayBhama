@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import inc.developer.vivonk.paybhama.R;
 import inc.developer.vivonk.paybhama.fragments.HomeFragment;
+import inc.developer.vivonk.paybhama.fragments.PaymentFragment;
 
 public class DashBoard extends AppCompatActivity {
 
@@ -24,10 +25,16 @@ public class DashBoard extends AppCompatActivity {
                 case R.id.navigation_home:
 //                    mTextMessage.setText(R.string.title_home);
                     getSupportActionBar().setTitle(R.string.app_name);
+                    if(findViewById(R.id.content)!=null){
+                        HomeFragment homeFragment=new HomeFragment();
+                        FragmentManager fragmentManager= getSupportFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.content,homeFragment).commit();
+                    }
                     return true;
                 case R.id.navigation_history:
 //                    mTextMessage.setText(R.string.history_hindi_english);
                     getSupportActionBar().setTitle(R.string.history_hindi_english);
+
                     return true;
                 case R.id.navigation_notifications:
                     getSupportActionBar().setTitle(R.string.title_notifications);
@@ -40,6 +47,11 @@ public class DashBoard extends AppCompatActivity {
                 case R.id.navigation_add_money:
                     getSupportActionBar().setTitle(R.string.add_money_hindi);
 //                    mTextMessage.setText(R.string.add_money_hindi);
+                    if(findViewById(R.id.content)!=null){
+                        PaymentFragment homeFragment=new PaymentFragment();
+                        FragmentManager fragmentManager= getSupportFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.content,homeFragment).commit();
+                    }
                     return true;
             }
             return false;
