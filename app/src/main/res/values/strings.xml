@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">PayBhama</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_history">History</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_setting">Settings</string>
+    <string name="title_add_money">Add Money</string>
 
     <!--Hindi Department-->
     <string name="dashboard_hindi">मुख्यपेज</string>
     <string name="setting_hindi">सेटिंग</string>
     <string name="notification_hindi">अधिसूचना</string>
+    <string name="history_hindi">इतिहास</string>
+    <string name="history_hindi_english">हिस्ट्री</string>
+    <string name="add_money_hindi">पैसे जोड़े </string>
 </resources>
