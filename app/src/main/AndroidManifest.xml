@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.PaymentActivity" android:label="Scan Bar Code"/>
+        <activity android:name=".Activities.loginOrSignUpActivity"></activity>
+        <activity android:name=".Activities.SignUpActivity" android:label="SignUp"></activity>
     </application>
 
 </manifest>
