@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
 
     <Button
         android:id="@+id/button_user_scan"
@@ -20,6 +23,46 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#999999"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_margin="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Send to another Bank Account"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        tools:ignore="MissingPrefix"/>
+    <EditText
+        android:id="@+id/sending_account_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_gradient"
+        android:drawablePadding="10dp"
+        android:hint="A/C No."
+        android:paddingEnd="10dp"
+        android:layout_margin="20dp"
+        android:paddingStart="10dp"
+        android:inputType="numberDecimal"
+        android:padding="6dp"
+        android:textSize="18sp"
+        />
+    <EditText
+        android:id="@+id/sending_ifsc_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_gradient"
+        android:drawableLeft=""
+        android:drawablePadding="10dp"
+        android:hint="IFSC Code"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18dp"
+        />
 </LinearLayout>
