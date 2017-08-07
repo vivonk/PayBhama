@@ -1,5 +1,6 @@
 package inc.developer.vivonk.paybhama.Activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -17,6 +18,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import inc.developer.vivonk.paybhama.R;
+import inc.developer.vivonk.paybhama.dashboard.DashBoard;
 
 public class SignUpActivity extends AppCompatActivity {
     private TextInputLayout mMAccountNumber,mMAadharNumber,mMIFSCCode,mMMobileNumber,mMEmailAddress;
@@ -79,6 +81,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mCardView3.setVisibility(View.VISIBLE);
+                startActivity(new Intent(getApplicationContext(), DashBoard.class));
             }
         });
 
