@@ -27,5 +27,9 @@
         android:layout_width="385dp"
         android:layout_height="30dp"
         android:text="Welcome To PayBhama"
-        android:textColor="@drawable/ic_history_black_48dp" />
+        android:textColor="@drawable/ic_history_black_48dp"
+
+
+
+        />
 </LinearLayout>
