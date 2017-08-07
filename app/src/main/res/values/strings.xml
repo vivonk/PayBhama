@@ -21,6 +21,7 @@
     <string name="family_number">family number</string>
     <string name="family_number_hindi">परिवार पहचान संख्या</string>
     <string-array name="india_banks">
+        <item>SELECT BANK NAME</item>
         <item>ABHYUDAYA CO-OP BANK LTD</item>
         <item>ABU DHABI COMMERCIAL BANK</item>
         <item>AKOLA DISTRICT CENTRAL CO-OPERATIVE BANK</item>
