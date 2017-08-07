@@ -8,160 +8,169 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="inc.developer.vivonk.paybhama.Activities.SignUpActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:layout_marginStart="10dp"
-    android:id="@+id/merchant_aadhar_number_input_layout"
-    app:hintEnabled="true"
-    android:hint="Aadhar Number">
-    <EditText
-        android:id="@+id/merchant_aadhar_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
-        android:layout_marginEnd="10dp"
-        android:inputType="textPersonName"
-        android:background="@drawable/border_input" />
-</android.support.design.widget.TextInputLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/border_input">
 
-        <Spinner
-            android:id="@+id/user_caste"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:entries="@array/demo"
-            android:paddingTop="20dp"
-            android:background="@drawable/border_input"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textSize="18dp"
-            />
-    </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_aadhar_number_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:hint="Aadhar Number"
+
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/merchant_aadhar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_input">
+
+                <Spinner
+                    android:id="@+id/user_caste"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_input"
+                    android:entries="@array/india_banks"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
 
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        app:hintEnabled="true"
-        android:id="@+id/merchant_account_number_input_layout"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_account_number_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:hint="Account Number"
 
-        android:hint="Account Number"
-        >
-    <EditText
-        android:id="@+id/merchant_account_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingTop="20dp"
-        android:layout_marginEnd="10dp"
+                app:hintEnabled="true">
 
-        android:paddingBottom="10dp"
-        android:background="@drawable/border_input"
-        android:inputType="number"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-         />
-    </android.support.design.widget.TextInputLayout>
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="10dp"
-    android:id="@+id/merchant_ifsc_code_input_layout"
-    android:layout_marginBottom="10dp"
-    app:hintEnabled="true"
-    android:hint="IFSC Code"
-    >
-    <EditText
-        android:id="@+id/merchant_ifsc_code"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
-        android:layout_marginEnd="10dp"
-        android:maxLength="15"
-        android:background="@drawable/border_input"
-        android:inputType="textMultiLine"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-         />
-</android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/merchant_mobile_number_input_layout"
-        android:hint="Mobile Number "
-        app:hintEnabled="true">
-    <EditText
-        android:id="@+id/merchant_mobile_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingStart="10dp"
-        android:layout_marginEnd="10dp"
+                <EditText
+                    android:id="@+id/merchant_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/border_input"
 
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/border_input"
-        android:inputType="phone"
-          />
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/merchant_email_address_input_layout"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        app:hintEnabled="true"
-        android:hint="E-mail"
-        >
-    <EditText
-        android:id="@+id/merchant_email_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:textSize="18sp"
-        android:layout_marginEnd="10dp"
-        android:paddingStart="10dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/border_input"
-        android:layout_marginTop="0dp"/>
-</android.support.design.widget.TextInputLayout>
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:paddingTop="10dp"
-        android:text="Register"
-        android:textColor="#fff"
-        android:textAllCaps="false"
-        android:background="@drawable/border_button_colored"
-        android:layout_marginTop="16dp"
-        />
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_ifsc_code_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:hint="IFSC Code"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/merchant_ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/border_input"
+                    android:inputType="textMultiLine"
+                    android:maxLength="15"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_mobile_number_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:hint="Mobile Number "
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/merchant_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="phone"
+
+                    android:maxLength="10"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_email_address_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:hint="E-mail"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/merchant_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_button_colored"
+                android:paddingTop="10dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
         </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </LinearLayout>
