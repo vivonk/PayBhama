@@ -4,18 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FFF"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="inc.developer.vivonk.paybhama.Activities.SignUpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     android:layout_marginStart="10dp"
+    android:id="@+id/merchant_aadhar_number_input_layout"
     app:hintEnabled="true"
-    android:hint="Username">
+    android:hint="Aadhar Number">
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/merchant_aadhar_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
@@ -25,16 +34,42 @@
         android:inputType="textPersonName"
         android:background="@drawable/border_input" />
 </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_input">
+
+        <Spinner
+            android:id="@+id/user_caste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:entries="@array/demo"
+            android:paddingTop="20dp"
+            android:background="@drawable/border_input"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
         app:hintEnabled="true"
+        android:id="@+id/merchant_account_number_input_layout"
+
         android:hint="Account Number"
         >
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/merchant_account_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
@@ -51,12 +86,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
+    android:id="@+id/merchant_ifsc_code_input_layout"
     android:layout_marginBottom="10dp"
     app:hintEnabled="true"
     android:hint="IFSC Code"
     >
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/merchant_ifsc_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
@@ -74,10 +110,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="10dp"
+        android:id="@+id/merchant_mobile_number_input_layout"
         android:hint="Mobile Number "
         app:hintEnabled="true">
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/merchant_mobile_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -93,13 +130,14 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/merchant_email_address_input_layout"
+        android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
         app:hintEnabled="true"
         android:hint="E-mail"
         >
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/merchant_email_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -109,18 +147,21 @@
         android:paddingTop="20dp"
         android:paddingBottom="10dp"
         android:background="@drawable/border_input"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+        android:layout_marginTop="0dp"/>
 </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="40dp"
-        android:hint="Register"
-        android:background="@drawable/border_input"
+        android:layout_margin="20dp"
+        android:paddingTop="10dp"
+        android:text="Register"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:background="@drawable/border_button_colored"
         android:layout_marginTop="16dp"
         />
-
-
+        </LinearLayout>
+</ScrollView>
 </LinearLayout>
