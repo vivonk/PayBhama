@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.PaymentActivity" android:label="Scan Bar Code"/>
-        <activity android:name=".Activities.PaymentByQRCodeActivity" android:label="Scan QR Code"/>
     </application>
 
 </manifest>

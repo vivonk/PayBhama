@@ -10,10 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.dlazaro66.qrcodereaderview.QRCodeReaderView;
-
 import inc.developer.vivonk.paybhama.Activities.PaymentActivity;
-import inc.developer.vivonk.paybhama.Activities.PaymentByQRCodeActivity;
 import inc.developer.vivonk.paybhama.R;
 
 import static android.content.ContentValues.TAG;
@@ -23,7 +20,7 @@ import static android.content.ContentValues.TAG;
  */
 
 public class PaymentFragment extends Fragment{
-    Button mProceedForPaymentBarCode,mProceedForPaymentQRCode;
+    Button mProceedForPaymentBarCode;
     View mView;
     @Nullable
     @Override
@@ -38,21 +35,12 @@ public class PaymentFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.e(TAG, "onActivityCreated: is called " );
-        mProceedForPaymentBarCode=(Button)mView.findViewById(R.id.button);
-        mProceedForPaymentQRCode=(Button)mView.findViewById(R.id.button1);
-        mProceedForPaymentQRCode.setText("Pay using QR Code");
+        mProceedForPaymentBarCode=(Button)mView.findViewById(R.id.button_user_scan);
         mProceedForPaymentBarCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.e(TAG, "onClick: called" );
                 startActivity(new Intent(getContext(), PaymentActivity.class));
-            }
-        });
-
-        mProceedForPaymentQRCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), PaymentByQRCodeActivity.class));
             }
         });
     }
