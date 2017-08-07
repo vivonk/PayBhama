@@ -55,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/input_gradient"
-        android:drawableLeft=""
         android:drawablePadding="10dp"
         android:hint="IFSC Code"
         android:layout_margin="20dp"
