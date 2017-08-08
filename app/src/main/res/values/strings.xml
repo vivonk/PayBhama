@@ -9,8 +9,8 @@
 
     <!--Hindi Department-->
     <string-array name="demo">
-        <item >Select Your Bank </item>
-        <item >Select Your Bank</item>
+        <item>Select Your Bank </item>
+        <item>Select Your Bank</item>
     </string-array>
     <string name="dashboard_hindi">मुख्यपेज</string>
     <string name="setting_hindi">सेटिंग</string>
