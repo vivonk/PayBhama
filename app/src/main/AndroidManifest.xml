@@ -13,10 +13,7 @@
         <activity
             android:name=".Activities.SignUpActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".dashboard.DashBoard"
@@ -28,11 +25,13 @@
         <activity
             android:name=".Activities.PaymentActivity"
             android:label="Scan Bar Code" />
-        <activity android:name=".Activities.loginOrSignUpActivity" />
-        <activity
-            android:name=".dashboard.DashBoard"
-            android:label="SignUp" />
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".Activities.loginOrSignUpActivity" android:label="Login"/>
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

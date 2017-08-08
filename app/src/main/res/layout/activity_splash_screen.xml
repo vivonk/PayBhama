@@ -6,5 +6,38 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_image_one"
     tools:context="inc.developer.vivonk.paybhama.SplashScreen">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:layout_gravity="start|bottom">
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1" android:background="@drawable/border_button_colored"
+            android:paddingTop="10dp"
+            android:text="Login"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+        <Button
+            android:id="@+id/button_redirect_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1" android:background="@drawable/border_button_colored"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:text="Know More "
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+    </LinearLayout>
 
 </FrameLayout>
