@@ -12,6 +12,19 @@
         <item>Select Your Bank </item>
         <item>Select Your Bank</item>
     </string-array>
+    <string name="mobile_number_hindi">मोबाइल नंबर</string>
+    <string name="mobile_number">Mobile Number</string>    <string name="password">Password</string>
+    <string name="password_hindi">पासवर्ड </string>
+    <string name="login">Login</string>
+    <string name="login_hindi">लॉगिन </string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password_hindi">पपासवर्ड भूल गए ? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_hindi">नए उपभोगता</string>
+    <string name="know_more_hindi">अधिक जाने</string>
+    <string name="show_password">Show Password</string>
+    <string name="show_password_hindi">पासवर्ड देखे</string>
+    <string name="know_more">Know More</string>
     <string name="dashboard_hindi">मुख्यपेज</string>
     <string name="setting_hindi">सेटिंग</string>
     <string name="notification_hindi">अधिसूचना</string>
@@ -20,6 +33,16 @@
     <string name="add_money_hindi">पैसे जोड़े </string>
     <string name="family_number">family number</string>
     <string name="family_number_hindi">परिवार पहचान संख्या</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="aadhar_number_hindi">आधार संख्या </string>
+    <string name="account_number">Account Number</string>
+    <string name="account_number_hindi">खाता संख्या </string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="ifsc_code_hindi">IFSC कोड </string>
+    <string name="email">E-mail</string>
+    <string name="email_hindi">इ-मेल </string>
+    <string name="next">Next</string>
+    <string name="next_hindi">अगला </string>
     <string-array name="india_banks">
         <item>SELECT BANK NAME</item>
         <item>ABHYUDAYA CO-OP BANK LTD</item>
