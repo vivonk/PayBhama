@@ -18,6 +18,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -29,10 +30,11 @@ public class SignUpActivity extends AppCompatActivity {
     TextInputLayout mMAccountNumber,mMAadharNumber,mMIFSCCode,mMMobileNumber,mMEmailAddress,mMOtp,mMPassword,mMFirstName,mMLastName,mMAddress;
     private CardView mCardView1,mCardView2,mCardView3;
     Button mNext1,mNext2,mNext3;
+    EditText etOtp,etFirstName,etLastName,etAddress,etAadharNumber,etAccountNumber,etIFSCCode,etMobileNumber,etEmailAddress;
     CheckBox mCheckPassword;
     TextInputEditText mPassword;
     TextView mOtpTextView,mGenderTextView;
-
+    Spinner spBankName;
     RadioButton mRbMale,mRbFemale;
     boolean mLanguageHindi;
     @Override
@@ -49,6 +51,18 @@ public class SignUpActivity extends AppCompatActivity {
         mMFirstName = (TextInputLayout) findViewById(R.id.merchant_first_name_input_layout);
         mMLastName = (TextInputLayout) findViewById(R.id.merchant_last_name_input_layout);
         mMAddress = (TextInputLayout) findViewById(R.id.merchant_address_input_layout);
+
+        etAadharNumber = (EditText) findViewById(R.id.merchant_aadhar_number);
+        spBankName = (Spinner) findViewById(R.id.merchant_bank_name_spinner);
+        etIFSCCode = (EditText) findViewById(R.id.merchant_ifsc_code);
+        etMobileNumber = (EditText) findViewById(R.id.merchant_mobile_number);
+        etEmailAddress = (EditText) findViewById(R.id.merchant_email_address);
+        etOtp = (EditText) findViewById(R.id.merchant_otp);
+        etFirstName = (EditText) findViewById(R.id.merchant_first_name);
+        etLastName = (EditText) findViewById(R.id.merchant_last_name);
+        etAddress = (EditText) findViewById(R.id.merchant_address);
+        etAccountNumber = (EditText) findViewById(R.id.merchant_account_number);
+
 
         mRbMale = (RadioButton) findViewById(R.id.rb_male);
         mRbFemale = (RadioButton) findViewById(R.id.rb_female);
@@ -122,6 +136,7 @@ public class SignUpActivity extends AppCompatActivity {
         mNext2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mCardView2.setVisibility(View.GONE);
                 mCardView3.setVisibility(View.VISIBLE);
             }
@@ -161,5 +176,14 @@ public class SignUpActivity extends AppCompatActivity {
         builder.setSpan(new ForegroundColorSpan(Color.BLACK), start, end,
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return builder.toString();
+    }
+    boolean ValidatorOne(){
+        return false;
+    }
+    boolean ValidatorTwo(){
+        return false;
+    }
+    boolean ValidatorThree(){
+        return false;
     }
 }
