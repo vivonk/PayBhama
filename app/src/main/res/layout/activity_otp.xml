@@ -29,6 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:id="@+id/tv_otp"
                     android:layout_marginTop="30dp"
                     android:text="Please enter the OTP below in case we fail to detect the SMS automatically"
                     android:textAlignment="textStart"

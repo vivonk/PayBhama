@@ -13,12 +13,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import inc.developer.vivonk.paybhama.R;
 import inc.developer.vivonk.paybhama.dashboard.DashBoard;
 
 public class loginOrSignUpActivity extends AppCompatActivity {
-    TextInputEditText mPassword;
+    TextInputEditText mTiePassword;
     TextInputLayout mTilPassword, mTilMobileNumber;
     EditText mMobileNumber;
     CheckBox mCheckPassword;
@@ -32,7 +34,7 @@ public class loginOrSignUpActivity extends AppCompatActivity {
         mTilMobileNumber = (TextInputLayout) findViewById(R.id.merchant_mobile_number_input_layout);
         mTilPassword = (TextInputLayout) findViewById(R.id.merchant_password_input_layout);
 
-        mPassword = (TextInputEditText) findViewById(R.id.merchant_password);
+        mTiePassword = (TextInputEditText) findViewById(R.id.merchant_password);
         mCheckPassword = (CheckBox) findViewById(R.id.checkbox_password);
 
         mButtonLogin = (Button) findViewById(R.id.button_login);
@@ -44,12 +46,12 @@ public class loginOrSignUpActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton button, boolean isChecked) {
                 if(!isChecked){
-                    mPassword.setTransformationMethod(new PasswordTransformationMethod());
-                    mPassword.setSelection(mPassword.getText().toString().length());
+                    mTiePassword.setTransformationMethod(new PasswordTransformationMethod());
+                    mTiePassword.setSelection(mTiePassword.getText().toString().length());
                 }
                 else {
-                    mPassword.setTransformationMethod(null);
-                    mPassword.setSelection(mPassword.getText().toString().length());
+                    mTiePassword.setTransformationMethod(null);
+                    mTiePassword.setSelection(mTiePassword.getText().toString().length());
 
                 }
             }
@@ -57,7 +59,16 @@ public class loginOrSignUpActivity extends AppCompatActivity {
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), DashBoard.class));
+                if(mMobileNumber.length()!=10){
+                    Toast.makeText(loginOrSignUpActivity.this, "Please enter correct phone number", Toast.LENGTH_SHORT).show();
+                }else if(mTiePassword.getText().toString().trim().length()!=mTiePassword.getText().toString().length()){
+                    Toast.makeText(loginOrSignUpActivity.this, "Password cannot include white space", Toast.LENGTH_SHORT).show();
+                }else  if(mTiePassword.length()<8){
+                    Toast.makeText(loginOrSignUpActivity.this, "Please type at least 8 digit password", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    startActivity(new Intent(getApplicationContext(), DashBoard.class));
+                }
             }
         });
 

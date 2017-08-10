@@ -18,7 +18,8 @@
     <string name="login">Login</string>
     <string name="login_hindi">लॉगिन </string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="forgot_password_hindi">पपासवर्ड भूल गए ? </string>
+    <string name="forgot_password_hindi">पासवर्ड भूल गए ? </string>
+    <string name="change_password_hindi">पासवर्ड बदले </string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_up_hindi">नए उपभोगता</string>
     <string name="know_more_hindi">अधिक जाने</string>
@@ -43,6 +44,24 @@
     <string name="email_hindi">इ-मेल </string>
     <string name="next">Next</string>
     <string name="next_hindi">अगला </string>
+    <string name="otp">One Time Password</string>
+    <string name="otp_hindi">एक प्रयोग पासवर्ड </string>
+    <string name="otp_text_view_hindi">कृपया अपने नंबर पर भेजे गया OTP डाले </string>
+    <string name="submit">Submit</string>
+    <string name="submit_hindi">जमा करें</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name_hindi">प्रथम नाम </string>
+    <string name="last_name">Last Name</string>
+    <string name="last_name_hindi">अंतिम नाम </string>
+    <string name="gender">Gender </string>
+    <string name="gender_hindi">लिंग </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="male_hindi">पुरुष </string>
+    <string name="female_hindi">स्त्री </string>
+    <string name="address">Address</string>
+    <string name="address_hindi">पता </string>
+    <string name="new_password_hindi">नया पासवर्ड </string>
     <string-array name="india_banks">
         <item>SELECT BANK NAME</item>
         <item>ABHYUDAYA CO-OP BANK LTD</item>

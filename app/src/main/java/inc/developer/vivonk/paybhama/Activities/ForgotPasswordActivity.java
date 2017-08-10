@@ -2,6 +2,7 @@ package inc.developer.vivonk.paybhama.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
@@ -17,6 +18,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     CheckBox mShowPassword;
     Button mProceedToChangePassword;
     TextInputEditText mNewPassword;
+    TextInputLayout mMNewPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,13 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         mProceedToChangePassword = (Button) findViewById(R.id.button_change_password);
         mShowPassword = (CheckBox) findViewById(R.id.checkbox_password);
         mNewPassword = (TextInputEditText) findViewById(R.id.merchant_new_password);
+        mMNewPassword = (TextInputLayout) findViewById(R.id.merchant_new_password_input_layout);
+
+        if(getSharedPreferences("user_info",MODE_PRIVATE).getString("language","English").equals("Hindi")){
+            mShowPassword.setText(R.string.show_password_hindi);
+            mMNewPassword.setHint(getResources().getString(R.string.new_password_hindi));
+            mProceedToChangePassword.setText(R.string.change_password_hindi);
+        }
         mProceedToChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
