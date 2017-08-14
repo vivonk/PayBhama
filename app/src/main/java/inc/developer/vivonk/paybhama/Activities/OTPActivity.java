@@ -34,6 +34,7 @@ public class OTPActivity extends Activity {
             mMOtp.setHint(getResources().getString(R.string.otp_hindi));
             tvOtp.setText(R.string.otp_text_view_hindi);
         }
+        //update is acauilavle
         mProceedToChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
