@@ -36,7 +36,7 @@ android:layout_height="match_parent"
     android:maxLength="7"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/proceed_to_pay"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="end"

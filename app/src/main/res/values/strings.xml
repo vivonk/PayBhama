@@ -13,7 +13,8 @@
         <item>Select Your Bank</item>
     </string-array>
     <string name="mobile_number_hindi">मोबाइल नंबर</string>
-    <string name="mobile_number">Mobile Number</string>    <string name="password">Password</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
     <string name="password_hindi">पासवर्ड </string>
     <string name="login">Login</string>
     <string name="login_hindi">लॉगिन </string>
@@ -51,6 +52,8 @@
     <string name="submit_hindi">जमा करें</string>
     <string name="first_name">First Name</string>
     <string name="first_name_hindi">प्रथम नाम </string>
+    <string name="please_wait">Please Wait</string>
+    <string name="please_wait_hindi">कृपया प्रतिक्षया करे </string>
     <string name="last_name">Last Name</string>
     <string name="last_name_hindi">अंतिम नाम </string>
     <string name="gender">Gender </string>
@@ -62,7 +65,21 @@
     <string name="address">Address</string>
     <string name="address_hindi">पता </string>
     <string name="new_password_hindi">नया पासवर्ड </string>
+    <string name="last_four_digit">Last four digit</string>
+    <string name="last_four_digit_hindi">अंतिम चार अंक </string>
+    <string name="first_four_digit">First four digit</string>
+    <string name="first_four_digit_hindi">प्रथम चार अंक </string>
+    <string name="details_hindi">आपके भामाशाह कार्ड  की जानकारी निम्न है </string>
+    <string name="first_four_digit_of_your_account_number">अकाउंट नंबर के  प्रथम चार अंक </string>
+    <string name="last_four_digit_of_your_account_number">अकाउंट नंबर के  अंतिम  चार अंक </string>
+    <string name="last_four_digit_of_your_aadhar_number">आधार  नंबर के  अंतिम  चार अंक  </string>
+    <string name="first_four_digit_of_your_aadhar_number">आधार  नंबर के  प्रथम  चार अंक </string>
+    <string name="name">नाम</string>
+    <string name="dob">जन्म दिनांक</string>
+    <string name="location">पता</string>
+
     <string-array name="india_banks">
+
         <item>SELECT BANK NAME</item>
         <item>ABHYUDAYA CO-OP BANK LTD</item>
         <item>ABU DHABI COMMERCIAL BANK</item>
