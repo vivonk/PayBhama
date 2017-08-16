@@ -35,7 +35,29 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/colorPrimary"
                     android:textSize="18sp" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/merchant_mobile_number_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:hint="Mobile"
+                    app:hintEnabled="true">
 
+                    <EditText
+                        android:id="@+id/merchant_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/border_input"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="20dp"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/merchant_otp_input_layout"
                     android:layout_width="match_parent"
