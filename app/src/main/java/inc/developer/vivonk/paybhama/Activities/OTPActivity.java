@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import inc.developer.vivonk.paybhama.R;
 
 /**
@@ -20,10 +24,12 @@ public class OTPActivity extends Activity {
     Button mProceedToChangePassword;
     TextInputLayout mMOtp;
     TextView tvOtp;
+
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
+
         mProceedToChangePassword = (Button) findViewById(R.id.button_next_change_password);
         mMOtp = (TextInputLayout) findViewById(R.id.merchant_otp_input_layout);
 
@@ -42,4 +48,5 @@ public class OTPActivity extends Activity {
             }
         });
     }
+
 }

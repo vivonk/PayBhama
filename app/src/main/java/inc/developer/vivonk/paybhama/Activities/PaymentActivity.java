@@ -141,75 +141,80 @@ public class PaymentActivity extends Activity implements ZXingScannerView.Result
                     .getAsJSONObject(new JSONObjectRequestListener() {
                         @Override
                         public void onResponse(JSONObject response) {
-                            Log.e(TAG, "onResponse: response of this is ---------\n"+ response );
+                            Log.e(TAG, "onResponse: response of this is ---------\n"+ response+ " length is "+response.length() );
                             try {
                                 JSONObject object = (JSONObject) response.get("hof_Details");
                                 String accountNumber;
                                 String aadharNumber;
-                                String IFSCCode ;
-                                String DOB ;
-                                String BHAMASHAH_ID ;
-                                String NAME_ENG ;
-                                String VILLAGE_NAME ;
-                                if(object.get("ACC_NO")!="null"){
-                                 accountNumber = (String) object.get("ACC_NO");}
-                                else{
-                                    accountNumber="Not provided";
-                                }
-                                if(object.get("AADHAR_ID")!="null"){
-                                    aadharNumber= (String) object.get("AADHAR_ID");
-                                }else{
-                                    aadharNumber= "Not Provided";
-                                }
-
-
-                                if(object.get("IFSC_CODE")!="null"){
-                                    IFSCCode = (String) object.get("IFSC_CODE");
-                                }else{
-                                    IFSCCode= "Not Provided";
-                                }
-                                if(object.get("DOB")!="null"){
-                                    DOB = (String)object.get("DOB");
-                                }else{
-                                    DOB= "Not Provided";
-                                }
-                                if(object.get("BHAMASHAH_ID")!="null"){
-                                    BHAMASHAH_ID = (String)object.get("BHAMASHAH_ID");
-                                }else{
-                                    BHAMASHAH_ID= "Not Provided";
-                                }
-                                if(object.get("NAME_ENG")!="null"){
-                                    NAME_ENG = (String) object.get("NAME_ENG");
-                                }else{
-                                    NAME_ENG= "Not Provided";
-                                }
-                                if(object.get("VILLAGE_NAME")!=null){
-                                    VILLAGE_NAME =  object.getString("VILLAGE_NAME");
-                                }else{
-                                    VILLAGE_NAME = "Not Provided";
-                                }
-
-
-
+                                String IFSCCode;
+                                String DOB;
+                                String BHAMASHAH_ID;
+                                String NAME_ENG;
+                                String VILLAGE_NAME;
                                 PaymentActivity.this.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        if(pgd.isShowing())
-                                        {
+                                        if (pgd.isShowing()) {
                                             pgd.dismiss();
                                         }
                                     }
                                 });
-                                Intent intent = new Intent(getApplicationContext(),PaymentVarifierActivity.class);
-                                intent.putExtra("ACCOUNT_NUMBER",accountNumber)
-                                        .putExtra("AADHAR_NUMBER",aadharNumber)
-                                        .putExtra("IFSC_CODE",IFSCCode)
-                                        .putExtra("DOB",DOB)
-                                        .putExtra("BHAMASHAH_ID",BHAMASHAH_ID)
-                                        .putExtra("VILLAGE_NAME",VILLAGE_NAME)
-                                        .putExtra("NAME_ENG",NAME_ENG);
-                                startActivity(intent);
-                            } catch (JSONException e) {
+                                if (response.length() > 1) {
+                                    if (object.get("ACC_NO") != "null") {
+                                        accountNumber = (String) object.get("ACC_NO");
+                                    } else {
+                                        accountNumber = "Not provided";
+                                    }
+                                    if (object.get("AADHAR_ID") != "null") {
+                                        aadharNumber = (String) object.get("AADHAR_ID");
+                                    } else {
+                                        aadharNumber = "Not Provided";
+                                    }
+
+
+                                    if (object.get("IFSC_CODE") != "null") {
+                                        IFSCCode = (String) object.get("IFSC_CODE");
+                                    } else {
+                                        IFSCCode = "Not Provided";
+                                    }
+                                    if (object.get("DOB") != "null") {
+                                        DOB = (String) object.get("DOB");
+                                    } else {
+                                        DOB = "Not Provided";
+                                    }
+                                    if (object.get("BHAMASHAH_ID") != "null") {
+                                        BHAMASHAH_ID = (String) object.get("BHAMASHAH_ID");
+                                    } else {
+                                        BHAMASHAH_ID = "Not Provided";
+                                    }
+                                    if (object.get("NAME_ENG") != "null") {
+                                        NAME_ENG = (String) object.get("NAME_ENG");
+                                    } else {
+                                        NAME_ENG = "Not Provided";
+                                    }
+                                    if (object.get("VILLAGE_NAME") != null) {
+                                        VILLAGE_NAME = object.getString("VILLAGE_NAME");
+                                    } else {
+                                        VILLAGE_NAME = "Not Provided";
+                                    }
+
+
+
+                                    Intent intent = new Intent(getApplicationContext(), PaymentVarifierActivity.class);
+                                    intent.putExtra("ACCOUNT_NUMBER", accountNumber)
+                                            .putExtra("AADHAR_NUMBER", aadharNumber)
+                                            .putExtra("IFSC_CODE", IFSCCode)
+                                            .putExtra("DOB", DOB)
+                                            .putExtra("BHAMASHAH_ID", BHAMASHAH_ID)
+                                            .putExtra("VILLAGE_NAME", VILLAGE_NAME)
+                                            .putExtra("NAME_ENG", NAME_ENG);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    Toast.makeText(PaymentActivity.this, "Please enter correct family number", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                            catch(JSONException e){
                                 e.printStackTrace();
                             }
                         }
