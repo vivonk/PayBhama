@@ -91,7 +91,6 @@
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
                     android:layout_marginTop="16dp"
-                    android:layout_weight="1"
                     android:background="@drawable/border_button_colored"
                     android:paddingTop="10dp"
                     android:text="Login"

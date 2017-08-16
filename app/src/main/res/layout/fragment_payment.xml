@@ -34,21 +34,22 @@
         android:layout_marginTop="10dp"
         android:textSize="20dp"
         tools:ignore="MissingPrefix"/>
+
     <EditText
         android:id="@+id/sending_account_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/input_gradient"
         android:drawablePadding="10dp"
         android:hint="A/C No."
-        android:paddingEnd="10dp"
-        android:layout_margin="20dp"
-        android:paddingStart="10dp"
         android:inputType="numberDecimal"
         android:padding="6dp"
-        android:textSize="18sp"
-        />
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18sp" />
+
     <EditText
         android:id="@+id/sending_ifsc_code"
         android:layout_width="match_parent"
@@ -64,4 +65,17 @@
         android:paddingStart="10dp"
         android:textSize="18dp"
         />
+
+    <Button
+        android:id="@+id/button_user_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border_button_colored"
+        android:paddingTop="10dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
 </LinearLayout>
