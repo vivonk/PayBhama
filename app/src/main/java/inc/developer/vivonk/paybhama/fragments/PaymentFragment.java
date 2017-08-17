@@ -4,13 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import inc.developer.vivonk.paybhama.Activities.MoneyVerifier;
 import inc.developer.vivonk.paybhama.Activities.PaymentActivity;
 import inc.developer.vivonk.paybhama.R;
 
@@ -55,7 +59,17 @@ public class PaymentFragment extends Fragment{
                 strAccount = etAccount.getText().toString();
                 strIFSC = etAccount.getText().toString();
                 if(10<=strAccount.length()&strAccount.length()<=16&!strIFSC.isEmpty()){
-
+                    /*final EditText input = new EditText(getContext());
+                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT);
+                    input.setLayoutParams(lp);
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                    alertDialog.setView(input); // uncomment this line*/
+                    startActivity(new Intent(getActivity(), MoneyVerifier.class));
+                }
+                else{
+                    Toast.makeText(getContext(), "Please enter required details", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="inc.developer.vivonk.paybhama.Activities.MoneyVerifier">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll1">
+    <EditText
+        android:id="@+id/merchant_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_gradient"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18dp"
+        />
+    <EditText
+        android:id="@+id/merchant_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_gradient"
+        android:drawablePadding="10dp"
+        android:hint="Amount"
+        android:layout_margin="20dp"
+        android:inputType="phone"
+        android:padding="6dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18dp"
+        />
+    <Button
+        android:id="@+id/button_send_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_button_colored"
+        android:paddingTop="10dp"
+        android:text="Send Money"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:id="@+id/success"
+        android:text="Success"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="#000" />
+    <ImageView
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:src="@drawable/success"
+        android:visibility="gone"
+        android:id="@+id/image_success"
+        android:layout_gravity="center"
+        android:contentDescription="nothing" />
+
+
+</LinearLayout>

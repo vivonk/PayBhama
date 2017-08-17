@@ -38,16 +38,16 @@
             android:textAlignment="textStart"
             android:textSize="18sp" />
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/merchant_otp_input_layout"
+            android:id="@+id/merchant_mobile_resend_input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginStart="10dp"
-            android:hint="One Time Password"
+            android:hint="Mobile Number"
             app:hintEnabled="true">
 
             <EditText
-                android:id="@+id/merchant_otp"
+                android:id="@+id/merchant_mobile_resend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -60,6 +60,29 @@
                 android:paddingTop="20dp"
                 android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/merchant_otp_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:hint="One Time Password"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/merchant_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/button_next_2"

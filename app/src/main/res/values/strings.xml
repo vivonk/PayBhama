@@ -18,6 +18,8 @@
         <item>automobile</item>
         <item>grocery</item>
     </string-array>
+    <string name="money_send_hindi_1">आपके द्वारा दिए गए अकाउंट नंबर पर</string>
+    <string name="money_send_hindi_2">रूपए जमा हो गए है </string>
     <string name="mobile_number_hindi">मोबाइल नंबर</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="password">Password</string>

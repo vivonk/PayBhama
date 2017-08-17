@@ -207,13 +207,9 @@ public class loginOrSignUpActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                            JSONArray array = new JSONArray();
                             if(!result.equals("failure")){
-                                try {
-                                     array = response.getJSONArray(0);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
+                                JSONArray array = response;
+                                array = response;
                                 SharedPreferences sharedPreference = getSharedPreferences("user_info", MODE_PRIVATE);
                                /* putString("aadhar",strAadhar)
                                         .putString("bank",strBank)
@@ -228,7 +224,8 @@ public class loginOrSignUpActivity extends AppCompatActivity {
                                             .putString("account",array.getString(4))
                                             .putString("mobile",array.getString(0))
                                             .putString("ifsc",array.getString(6))
-                                            .putString("password",array.getString(1)).apply();
+                                            .putString("password",array.getString(1))
+                                            .putBoolean("log",true).apply();
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
