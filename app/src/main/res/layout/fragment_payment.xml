@@ -64,4 +64,35 @@
         android:paddingStart="10dp"
         android:textSize="18dp"
         />
+    <EditText
+        android:id="@+id/sending_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_gradient"
+        android:drawablePadding="10dp"
+        android:hint="Sending for"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18dp"
+        />
+    <Button
+        android:id="@+id/button_send_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_button_colored"
+        android:paddingTop="10dp"
+        android:text="Send Money"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
 </LinearLayout>

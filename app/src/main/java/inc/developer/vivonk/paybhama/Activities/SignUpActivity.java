@@ -62,12 +62,12 @@ public class SignUpActivity extends AppCompatActivity {
     CheckBox mCheckPassword;
     TextInputEditText mPassword;
     TextView mOtpTextView,mGenderTextView;
-    Spinner spBankName;
+    Spinner spBankName,spBusinessType;
     RadioButton mRbMale,mRbFemale;
     boolean mLanguageHindi;
     int otp;
     String strFirst,strLast,strGender,strDistrict,strLocation,strPassword;
-    String strAadhar,strAccount,strBank,strIFSCCode,strEmail,strMobile;
+    String strAadhar,strAccount,strBank,strIFSCCode,strEmail,strMobile,strBusiness;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +96,7 @@ public class SignUpActivity extends AppCompatActivity {
         etAddress = (EditText) findViewById(R.id.merchant_address);
         etAccountNumber = (EditText) findViewById(R.id.merchant_account_number);
         etDistrict = (EditText) findViewById(R.id.merchant_address_district);
+        spBusinessType = (Spinner) findViewById(R.id.merchant_business_type);
 
         mRbMale = (RadioButton) findViewById(R.id.rb_male);
         mRbFemale = (RadioButton) findViewById(R.id.rb_female);
@@ -238,15 +239,7 @@ public class SignUpActivity extends AppCompatActivity {
         strEmail = etEmailAddress.getText().toString();
         Log.e("Strings are", "ValidatorOne: --------------  \n"+strAadhar.length()+"\n"+ strBank.equals("SELECT BANK NAME")+"\n"+strAccount.isEmpty()+"\n"+strMobile.length()+"\n"+strIFSCCode.isEmpty());
         if(strAadhar.length()==12&!strAccount.isEmpty()&!strBank.equals("SELECT BANK NAME")&!strIFSCCode.isEmpty()&strMobile.length()==10){
-            SharedPreferences sharedPreference = getSharedPreferences("user_info",MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreference.edit();
-            editor.putString("aadhar",strAadhar)
-                    .putString("bank",strBank)
-                    .putString("account",strAccount)
-                    .putString("ifsc",strIFSCCode)
-                    .putString("mobile",strMobile)
-                    .putString("email",strEmail)
-                    .apply();
+
             Random rand = new Random();
             otp = rand.nextInt(99999)+1;
             Log.e(" OTP ", "ValidatorTwo: ---------------     "+ otp );
@@ -349,6 +342,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
             pgd.setCancelable(false);
             pgd.show();
+            strBusiness = spBusinessType.getSelectedItem().toString();
             super.onPreExecute();
 
         }
@@ -396,6 +390,23 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONArray response) {
                             Log.e("TAG", "onResponse:99999999999999  "+response );
+                            SharedPreferences sharedPreference = getSharedPreferences("user_info",MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreference.edit();
+                            editor.putString("aadhar",strAadhar)
+                                    .putString("bank",strBank)
+                                    .putString("account",strAccount)
+                                    .putString("ifsc",strIFSCCode)
+                                    .putString("mobile",strMobile)
+                                    .putString("email",strEmail)
+                                    .putString("type",strBusiness)
+                                    .apply();
+
+                            SignUpActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    startActivity(new Intent(getApplicationContext(), DashBoard.class));
+                                }
+                            });
                         }
 
                         @Override
@@ -405,12 +416,7 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     });
 
-            SignUpActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    startActivity(new Intent(getApplicationContext(), DashBoard.class));
-                }
-            });
+
             return null;
         }
 

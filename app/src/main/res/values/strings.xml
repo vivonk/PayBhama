@@ -8,9 +8,15 @@
     <string name="title_add_money">Add Money</string>
 
     <!--Hindi Department-->
-    <string-array name="demo">
-        <item>Select Your Bank </item>
-        <item>Select Your Bank</item>
+    <string-array name="business">
+        <item>hardware</item>
+        <item>food and accommodation</item>
+        <item>cloths</item>
+        <item>stationary</item>
+        <item>medical</item>
+        <item>entertainment</item>
+        <item>automobile</item>
+        <item>grocery</item>
     </string-array>
     <string name="mobile_number_hindi">मोबाइल नंबर</string>
     <string name="mobile_number">Mobile Number</string>

@@ -207,9 +207,32 @@ public class loginOrSignUpActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
+                            JSONArray array = new JSONArray();
                             if(!result.equals("failure")){
-                                 startActivity(new Intent(getApplicationContext(), DashBoard.class));
+                                try {
+                                     array = response.getJSONArray(0);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                SharedPreferences sharedPreference = getSharedPreferences("user_info", MODE_PRIVATE);
+                               /* putString("aadhar",strAadhar)
+                                        .putString("bank",strBank)
+                                        .putString("account",strAccount)
+                                        .putString("ifsc",strIFSCCode)
+                                        .putString("mobile",strMobile)
+                                        .putString("email",strEmail)*/
+                                SharedPreferences.Editor editor = sharedPreference.edit();
+                                try {
+                                    editor.putString("aadhar",array.getString(2))
+                                            .putString("bank",array.getString(3))
+                                            .putString("account",array.getString(4))
+                                            .putString("mobile",array.getString(0))
+                                            .putString("ifsc",array.getString(6))
+                                            .putString("password",array.getString(1)).apply();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                startActivity(new Intent(getApplicationContext(), DashBoard.class));
                             }else {
                                 Toast.makeText(loginOrSignUpActivity.this, "Please enter correct details", Toast.LENGTH_SHORT).show();
                                 //TODO Hindi karo
@@ -226,6 +249,7 @@ public class loginOrSignUpActivity extends AppCompatActivity {
                         @Override
                         public void onError(ANError anError) {
                             Log.e("Error", "onError: Error is "+anError );
+                            Toast.makeText(loginOrSignUpActivity.this, "Server Error, For testing purpose click twice for going forward. Contact us on 8006467951 or IITR_Cracks", Toast.LENGTH_LONG).show();
                             loginOrSignUpActivity.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {

@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -16,31 +17,24 @@ import inc.developer.vivonk.paybhama.fragments.PaymentFragment;
 public class DashBoard extends AppCompatActivity {
 
     private TextView mTextMessage;
-
+    private Menu menu;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
-                    getSupportActionBar().setTitle(R.string.app_name);
-                    if(findViewById(R.id.content)!=null){
-                        HomeFragment homeFragment=new HomeFragment();
-                        FragmentManager fragmentManager= getSupportFragmentManager();
-                        fragmentManager.beginTransaction().replace(R.id.content,homeFragment).commit();
-                    }
-                    return true;
+
                 case R.id.navigation_history:
 //                    mTextMessage.setText(R.string.history_hindi_english);
+                    if(getSharedPreferences("user_info",MODE_PRIVATE).getString("language","English").equals("Hindi")){
                     getSupportActionBar().setTitle(R.string.history_hindi_english);
+                    return true;
+                }
+                getSupportActionBar().setTitle("History");
 
                     return true;
-                case R.id.navigation_notifications:
-                    getSupportActionBar().setTitle(R.string.title_notifications);
-//                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+
                 case R.id.navigation_setting:
                     getSupportActionBar().setTitle(R.string.setting_hindi);
 //                    mTextMessage.setText(R.string.setting_hindi);
@@ -67,16 +61,26 @@ public class DashBoard extends AppCompatActivity {
 
 //        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        if(getSharedPreferences("user_info",MODE_PRIVATE).getString("language","English").equals("Hindi")){
+            navigation.inflateMenu(R.menu.navigation_hindi);
+        }
+        else{
+            navigation.inflateMenu(R.menu.navigation);
+        }
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         if(findViewById(R.id.content)!=null){
             if (savedInstanceState != null) {
                 return;
             }
-            HomeFragment homeFragment=new HomeFragment();
+            PaymentFragment paymentFragment=new PaymentFragment();
             FragmentManager fragmentManager= getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content,homeFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.content,paymentFragment).commit();
         }
+
+
     }
+
 
     @Override
     public void onBackPressed() {
